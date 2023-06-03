@@ -20,7 +20,7 @@ size="20"文本框长度
 -->
     <p>名字:<input type="text" name="username"/> </p>
 <!--密码框:input type:"password"-->
-    <p>密码:<input type="password" name="pwd"/> </p>
+    <p>密码:<input type="password" name="pwd" hidden=""/> </p>
 
 <!--单选框标签
     input type:"radio"
@@ -28,14 +28,112 @@ size="20"文本框长度
     name:相同表示同一组
 -->
     <p>性别:
-        <input type="radio" value="boy" name="sex"/>男
+        <input type="radio" value="boy" name="sex" checked/>男
         <input type="radio" value="girl" name="sex"/>女
 
     </p>
+<!--多选框
+input type="checkbox"
+-->
+    <p>爱好:
+        <input type="checkbox" value="sleep" name="hobby">睡觉
+        <input type="checkbox" value="code" name="hobby" checked>敲代码
+        <input type="checkbox" value="chat" name="hobby">聊天
+        <input type="checkbox" value="game" name="hobby">游戏
+    </p>
+<!--按钮
+input type="button"  普通按钮
+input type="image"   图像按钮
+input type="submit"  提交按钮
+input type="reset"   重置按钮
+-->
+<p>按钮:
+    <input type="button" value="点击变长" name="btn1">
+    <input type="image" src="../resource/image/面向对象.png" alt="面向对象">
+</p>
+<!--下拉框、列表框
+-->
+<p>国家：
+    <select name="国家清单" id="wenhao">
+        <option value="china">中国</option>
+        <option value="us">美国</option>
+        <option value="eth">瑞士</option>
+        <option value="yindu" selected>印度</option>
+    </select>
+</p>
+<!--文本域
+ 列 cols="50" 行 rows="10"
+-->
+<p>反馈:
+    <textarea name="txtarea" id="txtarea" cols="50" rows="10" placeholder="请输入你的意见"></textarea>
+</p>
+<!--文件域
+input type="file" name="files" id="files"
+-->
+<p>
+    <input type="file" name="files" id="files">
+    <input type="button" value="上传" name="upload" id="upload">
+</p>
+
+<!--邮件验证-->
+<p>邮箱:
+    <input type="email" name="email" id="email" placeholder="请输入邮箱" required>
+</p>
+<!--URL验证-->
+<p>URL:
+    <input type="url" name="url" id="URL">
+</p>
+<!--数字验证-->
+<p>数字:
+    <input type="number" name="num" id="num" max="100" min="0" step="10">
+</p>
+
+<!--滑块
+input type="range"
+-->
+<p>音量:
+    <input type="range" name="voice" id="voice" min="0" max="100" step="2">
+</p>
+
+<!--搜索框-->
+<p>搜索:
+    <input type="search" name="search" id="serch">
+
+</p>
+
+<!--增强鼠标可用性-->
+<p>
+    <label for="serch">点我试试</label> <!--光标跳转到搜索框-->
+    <input type="text" name="txt" id="txt">
+</p>
+
+<!--
+https://www.jb51.net/tools/regexsc.htm
+-->
+<p>自定义邮箱:
+    <input type="text" name="divmail" id="" pattern="/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+/^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/或\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+</p>
+
+    
+<!--表单的应用
+隐藏域：hidden
+只读：readonly
+禁用：disabled
+-->
+
+
+<!--表单的初级验证
+placeholder 提示信息
+required  非空判断
+pattern 正则表达式
+-->
+
+
 
 <p>
     <input type="submit"> <!--提交-->
-    <input type="reset"> <!--重置-->
+    <input type="reset" value="清空表单" disabled> <!--重置-->
 </p>
 
 </form>
